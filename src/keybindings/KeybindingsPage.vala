@@ -2,7 +2,7 @@ using Gtk;
 using Gee;
 
 namespace Ilia {
-    class KeybingingsPage : DialogPage, GLib.Object {
+    class KeybindingsPage : DialogPage, GLib.Object {
         private const int ITEM_VIEW_COLUMNS = 3;
         private const int ITEM_VIEW_COLUMN_KEYBINDING = 0;
         private const int ITEM_VIEW_COLUMN_SUMMARY = 1;
@@ -19,7 +19,7 @@ namespace Ilia {
 
         private Gtk.Entry entry;
 
-        private SessionContoller session_controller;
+        private SessionController session_controller;
 
         private Gtk.Widget root_widget;
 
@@ -51,7 +51,7 @@ namespace Ilia {
             return keybindings;
         }
 
-        public async void initialize(GLib.Settings settings, HashTable<string, string ?> arg_map, Gtk.Entry entry, SessionContoller sessionController, string wm_name, bool is_wayland) {
+        public async void initialize(GLib.Settings settings, HashTable<string, string ?> arg_map, Gtk.Entry entry, SessionController sessionController, string wm_name, bool is_wayland) {
             this.entry = entry;
             this.session_controller = sessionController;
             this.wm_name = wm_name;

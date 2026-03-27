@@ -31,7 +31,7 @@ namespace Ilia {
 
         private GLib.Settings settings;
 
-        private SessionContoller session_controller;
+        private SessionController session_controller;
 
         private string[] launch_history;
 
@@ -71,7 +71,7 @@ namespace Ilia {
             return keybindings;
         }
 
-        public async void initialize(GLib.Settings settings, HashTable<string, string ?> arg_map, Gtk.Entry entry, SessionContoller sessionController, string wm_name, bool is_wayland) throws GLib.Error {
+        public async void initialize(GLib.Settings settings, HashTable<string, string ?> arg_map, Gtk.Entry entry, SessionController sessionController, string wm_name, bool is_wayland) throws GLib.Error {
             app_timer = new GLib.Timer();
             app_timer.start();
             this.settings = settings;

@@ -5,7 +5,7 @@ namespace Ilia {
     /**
      * Represents actions and state that DialogPage types may access from the active session.
      */
-    public interface SessionContoller : GLib.Object {
+    public interface SessionController : GLib.Object {
 
         // Exit the app
         public abstract void quit();
@@ -18,7 +18,7 @@ namespace Ilia {
         /**
          * Initialize the page. Create widgets, load model data, etc.
          */
-        public async abstract void initialize(GLib.Settings settings, HashTable<string, string ?> arg_map, Gtk.Entry entry, SessionContoller sessionController, string wm_name, bool is_wayland) throws GLib.Error;
+        public async abstract void initialize(GLib.Settings settings, HashTable<string, string ?> arg_map, Gtk.Entry entry, SessionController sessionController, string wm_name, bool is_wayland) throws GLib.Error;
 
         /**
          * Return the root widget of the page
